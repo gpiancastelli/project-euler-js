@@ -31,8 +31,8 @@ java -jar util/yuicompressor-2.4.2.jar web/s/pe.css > site/s/pe.min.css && \
     die "Failed to minimize CSS"
 
 # use git to commit site to gh-pages root branch
-git checkout gh-pages
-mv site/* .
+git checkout gh-pages || die "Failed to switch to gh-pages branch"
+cp -R site/* .
 rm -rf site
 git add .
 git commit -m "Publish site."
