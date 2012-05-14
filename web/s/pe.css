@@ -1,0 +1,123 @@
+body {
+    width: 625px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1, h2 {
+    color: #6b4e3d;
+    text-align: center;
+}
+
+h1 {
+    font-variant: small-caps;
+    margin-bottom: 0;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    line-height: 0.5;
+    font-size: 110%;
+}
+
+h3 {
+    margin-bottom: 0;
+}
+
+/*
+pre, code {
+    font-family: "Courier New", Consolas, Inconsolata, 'Andale Mono', Monaco, 'Liberation Mono', 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', monospace;
+}
+*/
+
+#p, #pn {
+    width: 67px;
+    float: left;
+    margin-right: 33px;
+    text-align: center;
+    background: #f93;
+    color: white;
+    border-right: 1px solid #6b4e3d;
+    border-bottom: 1px solid #6b4e3d;
+}
+
+#p {
+    font-size: 80%;
+    font-variant: small-caps;
+    margin-bottom: 16px;
+}
+
+#pn {
+    font-size: 130%;
+}
+
+#pe { width: 625px; }
+
+#pd {
+    clear: both;
+    margin-top: 0;
+}
+
+.t {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.success {
+    background-color: #cfffcf;
+}
+
+.failure {
+    background-color: #ffcfcf;
+}
+
+#tr {
+    float: right;
+    margin-top: -2px;
+}
+
+#text, #solution, #time, #icon {
+    padding: 0px 10px 0px 10px;
+}
+
+#icon, #icon img {
+    vertical-align: middle;
+}
+
+.v {
+    text-align: center;
+}
+
+.v a {
+    text-decoration: none;
+}
+
+.v a:hover span {
+    border-color: #f93;
+    background-color: #f93;
+}
+
+.v img {
+    margin-bottom: -2px;
+}
+
+.v span {
+    line-height: 1;
+    border: 1px solid black;
+    padding: 0px 5px 0px 5px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+}
+
+.v span.s {
+    background-color: white;
+    color: black;
+}
+
+.c {
+    clear: both;
+    text-align: center;
+    font-size: small;
+}
