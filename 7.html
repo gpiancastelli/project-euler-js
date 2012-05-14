@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<meta charset=utf-8>
+<title>Project Euler - Solutions in JavaScript</title>
+<link rel=stylesheet href=s/pe.min.css>
+<link rel=stylesheet href=s/desert.min.css>
+<h1>Project Euler</h1>
+<h2>Solutions in JavaScript</h2>
+<div id=main>
+<div id=pe>
+<h3><div id=p>Problem <div id=pn>7</div></div><div id=pt>Find the 10001st prime.</div></h3>
+<p id=pd>By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.<p>What is the 10001st prime number?
+<h3 id=s>Solution</h3>
+
+<pre id=sc class=prettyprint>
+<code class=language-javascript>
+function prime(index) {
+    var i, primes = [2, 3], n = 5;
+
+    function isPrime(n) {
+        var i = 1, p = primes[i],
+            limit = Math.ceil(Math.sqrt(n));
+        while (p <= limit) {
+            if (n % p === 0) {
+                return false;
+            }
+            i += 1;
+            p = primes[i];
+        }
+        return true;
+    }
+
+    for (i = 2; i <= index; i += 1) {
+        while (!isPrime(n)) {
+            n += 2;
+        }
+        primes.push(n);
+        n += 2;
+    }
+    return primes[index - 1];
+}
+
+console.log(prime(1e4 + 1));
+</code>
+</pre>
+
+</div>
+</div>
+
+<div>
+<input id=r type=button value=Run></td>
+<table id=tr>
+<tr>
+<td id=text></td>
+<td id=solution></td>
+<td id=time></td>
+<td id=icon></td>
+</tr>
+</table>
+</div>
+<p class=v><a href=6.html rel=prev title="back to Problem 6"><img src=i/p.png alt=&lt;></a> <a href=1.html title="go to Problem 1"><span>1</span></a> <a href=2.html title="go to Problem 2"><span>2</span></a> <a href=3.html title="go to Problem 3"><span>3</span></a> <a href=4.html title="go to Problem 4"><span>4</span></a> <a href=5.html title="go to Problem 5"><span>5</span></a> <a href=6.html title="go to Problem 6"><span>6</span></a> <span class=s>7</span> <a href=8.html title="go to Problem 8"><span>8</span></a> <a href=8.html rel=next title="onward to Problem 8"><img src=i/n.png alt=&gt;></a>
+<p class=c>&copy; 2012 <a href=http://github.com/gpiancastelli>Giulio Piancastelli</a><br>
+Suggestions? Issues? Comments? <a href=http://github.com/gpiancastelli>I&rsquo;d love to hear you!</a>
+<script src=j/jquery.min.js></script>
+<script src=j/prettify.min.js></script>
+<script src=j/7.js></script>

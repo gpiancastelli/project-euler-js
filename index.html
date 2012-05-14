@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<meta charset=utf-8>
+<title>Project Euler - Solutions in JavaScript</title>
+<link rel=stylesheet href=s/pe.min.css>
+<link rel=stylesheet href=s/desert.min.css>
+<h1>Project Euler</h1>
+<h2>Solutions in JavaScript</h2>
+<div id=main>
+<div id=pe>
+<h3><div id=p>Problem <div id=pn>1</div></div><div id=pt>Add all the natural numbers below one thousand that are multiples of 3 or 5.</div></h3>
+<p id=pd>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.<p>Find the sum of all the multiples of 3 or 5 below 1000.
+<h3 id=s>Solution</h3>
+
+<pre id=sc class=prettyprint>
+<code class=language-javascript>
+function sumOfMultiple(limit) {
+    var i, sum = 0;
+    for (i = 3; i < limit; i += 1) {
+        if (i % 3 === 0 || i % 5 === 0) {
+            sum += i;
+        }
+    }
+    return sum;
+}
+
+console.log(sumOfMultiple(1000));
+</code>
+</pre>
+
+</div>
+</div>
+
+<div>
+<input id=r type=button value=Run></td>
+<table id=tr>
+<tr>
+<td id=text></td>
+<td id=solution></td>
+<td id=time></td>
+<td id=icon></td>
+</tr>
+</table>
+</div>
+<p class=v><span class=s>1</span> <a href=2.html title="go to Problem 2"><span>2</span></a> <a href=3.html title="go to Problem 3"><span>3</span></a> <a href=4.html title="go to Problem 4"><span>4</span></a> <a href=5.html title="go to Problem 5"><span>5</span></a> <a href=6.html title="go to Problem 6"><span>6</span></a> <a href=7.html title="go to Problem 7"><span>7</span></a> <a href=8.html title="go to Problem 8"><span>8</span></a> <a href=2.html rel=next title="onward to Problem 2"><img src=i/n.png alt=&gt;></a>
+<p class=c>&copy; 2012 <a href=http://github.com/gpiancastelli>Giulio Piancastelli</a><br>
+Suggestions? Issues? Comments? <a href=http://github.com/gpiancastelli>I&rsquo;d love to hear you!</a>
+<script src=j/jquery.min.js></script>
+<script src=j/prettify.min.js></script>
+<script src=j/1.js></script>

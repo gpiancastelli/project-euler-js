@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<meta charset=utf-8>
+<title>Project Euler - Solutions in JavaScript</title>
+<link rel=stylesheet href=s/pe.min.css>
+<link rel=stylesheet href=s/desert.min.css>
+<h1>Project Euler</h1>
+<h2>Solutions in JavaScript</h2>
+<div id=main>
+<div id=pe>
+<h3><div id=p>Problem <div id=pn>3</div></div><div id=pt>Find the largest prime factor of a composite number.</div></h3>
+<p id=pd>The prime factors of 13195 are 5, 7, 13 and 29.<p>What is the largest prime factor of the number 600851475143?
+<h3 id=s>Solution</h3>
+
+<pre id=sc class=prettyprint>
+<code class=language-javascript>
+function largestPrimeFactor(n) {
+    var d = Math.ceil(Math.sqrt(n));
+
+    function isPrime(n) { 
+        var i, limit = Math.ceil(Math.sqrt(n));
+        // since the main loop generates odd numbers only
+        // we can start testing primality dividing by 3
+        for (i = 3; i <= limit; i += 2) {
+            if (n % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // start with an odd number
+    d = (d & 1) === 0 ? d - 1 : d;
+
+    //while (!(isPrime(d) && n % d === 0)) {
+    while (!(n % d === 0 && isPrime(d))) {
+        d -= 2; // odd numbers only
+    }
+    return d;
+}
+
+console.log(largestPrimeFactor(600851475143));
+</code>
+</pre>
+
+</div>
+</div>
+
+<div>
+<input id=r type=button value=Run></td>
+<table id=tr>
+<tr>
+<td id=text></td>
+<td id=solution></td>
+<td id=time></td>
+<td id=icon></td>
+</tr>
+</table>
+</div>
+<p class=v><a href=2.html rel=prev title="back to Problem 2"><img src=i/p.png alt=&lt;></a> <a href=1.html title="go to Problem 1"><span>1</span></a> <a href=2.html title="go to Problem 2"><span>2</span></a> <span class=s>3</span> <a href=4.html title="go to Problem 4"><span>4</span></a> <a href=5.html title="go to Problem 5"><span>5</span></a> <a href=6.html title="go to Problem 6"><span>6</span></a> <a href=7.html title="go to Problem 7"><span>7</span></a> <a href=8.html title="go to Problem 8"><span>8</span></a> <a href=4.html rel=next title="onward to Problem 4"><img src=i/n.png alt=&gt;></a>
+<p class=c>&copy; 2012 <a href=http://github.com/gpiancastelli>Giulio Piancastelli</a><br>
+Suggestions? Issues? Comments? <a href=http://github.com/gpiancastelli>I&rsquo;d love to hear you!</a>
+<script src=j/jquery.min.js></script>
+<script src=j/prettify.min.js></script>
+<script src=j/3.js></script>
