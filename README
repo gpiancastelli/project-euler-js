@@ -1,3 +1,5 @@
 This repository contains JavaScript solutions to some problems from Project Euler.
 
 This is just recreational programming. No claims of brilliance or efficiency: just fun, distraction, and maybe a bit of learning. When boredom strikes in, recreational programming comes to the rescue. Then it gets abandoned, because it's not that useful anyway.
+
+It's also been an excuse to learn how GitHub Pages work. Problems I worked on can be visited at http://gpiancastelli.github.com/project-euler-js and their proposed solutions can be run directly from within the browser.
