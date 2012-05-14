@@ -65,7 +65,7 @@ NEXT_NAV_TEMPLATE = '''
 
 SCRIPT_TEMPLATE = '''
 <p class=c>&copy; 2012 <a href=http://github.com/gpiancastelli>Giulio Piancastelli</a><br>
-Suggestions? Issues? Comments? <a href=http://github.com/gpiancastelli>I&rsquo;d love to hear you!</a>
+Suggestions? Issues? Comments? <a href=https://github.com/gpiancastelli/project-euler-js/issues>I&rsquo;d love to hear you!</a>
 <script src=j/jquery.min.js></script>
 <script src=j/prettify.min.js></script>
 '''
