@@ -30,8 +30,12 @@ java -jar util/yuicompressor-2.4.2.jar web/s/pe.css > site/s/pe.min.css && \
     java -jar util/yuicompressor-2.4.2.jar web/s/desert.css > site/s/desert.min.css || \
     die "Failed to minimize CSS"
 
-# TODO use git to commit site to ghpages root branch
-# ...
-
-# remove site
-#rm -rf site
+# use git to commit site to gh-pages root branch
+git checkout gh-pages
+mv site/* .
+rm -rf site
+git add .
+git commit -m "Publish site."
+#git push origin gh-pages
+# go back to the main branch
+git checkout master
